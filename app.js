@@ -17,7 +17,7 @@ app.get('/', function(req, res) {
 app.get('/hotels', function(req, res) {
     res.render('hotels/all-hotels');
 });
-app.get('/hotels/:id', function(req, res) {
+app.get('/hotel-details', function(req, res) {
     res.render('hotels/hotel-details');
 });
 // LOGIN PAGE

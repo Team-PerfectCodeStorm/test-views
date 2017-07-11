@@ -1,67 +1,42 @@
-/*.black {
-    color: #000;
-}
-
-.blue {
-    color: #007fad;
-}
-
-.red {
-    color: #c94a38;
-}
-
-.orange {
-    color: #f48f00;
-}
-
-.lighter {
-    font-weight: lighter;
-}*/
-
-/*.cards {
-  display:grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-  grid-gap: 10px;
-}*/
-
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*, 
+*:before, 
+*:after {
   box-sizing: inherit;
 }
 
-body {
-  font: 1em/1.4 Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #fafafa;
-}
-
-body a {
-    text-decoration: none;
-    color: #fff;
-}
-
-body a:hover {
-  color: orange;
-}
-
-img {
-  width: 100%;
-  max-height: 220px;
-}
-
+/* ------ Cards ------ */
 .cards {
   display:grid;
   grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
   grid-gap: 10px;
   margin: 0 auto;
   max-width: 1080px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .card {
   background-color: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
   border-radius: 4px;
+}
+
+.card a {    
+    color: #fff;
+    text-decoration: none;
+}
+
+.card a:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+.card img {
+  width: 100%;
+  max-height: 220px;
 }
 
 .card header {
@@ -72,8 +47,8 @@ img {
   border-top-right-radius: 4px;
 }
 
-.card header h2, .card header h4 {
-  color: #fff;
+.card header h2, 
+.card header h4 {
   font-size: 1.4em;
   font-weight: normal;
   margin: 0;
@@ -81,13 +56,13 @@ img {
 }
 
 .card header h4 {
-    color: lightcyan;
     font-size: 1.1em;
     font-style: italic;
 }
 
 .card .body {
   padding: 10px;
-  /*font-size: .9rem; */
-  color: #757575;
+  color: #444;
 }
+
+/* ------ Details ------ */

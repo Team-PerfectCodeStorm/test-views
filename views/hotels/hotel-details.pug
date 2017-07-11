@@ -1,3 +1,99 @@
 extend ../_shared/_master
 
 block body
+     #container
+        // tab panes
+        #prod_wrapper
+            #panes
+                div
+                    img(src='http://www.bgvakancia.com/common_images/offers/7289/thumb_e4ededa1323c52fd2404c0cd54b5cf66.jpg', alt='')
+                    h2 Welcome to Bangalore
+                    p
+                        | Nulla hendrerit commodo tortor, vitae elementum magna convallis nec. Nam tempor nibh a purus aliquam et adipiscing elit gravida. Ut vitae nunc a libero volutpat gravida. Nullam egestas mi sit amet dui scelerisque eu laoreet nisi ultrices. Ut vitae nunc a libero volutpat gravida. Nam tempor nibh a purus aliquam.
+                    p(style='text-align:right; margin-right: 16px')
+                        a.button(href='#') More Info
+                        a.button(href='#') Buy Now
+                div
+                    img(src='http://www.bgvakancia.com/common_images/offers/5921/thumb_4137042717e33812b194250e7affd7aa.jpg', alt='')
+                    h2 Meet Our Team
+                    p
+                        | Nulla hendrerit commodo tortor, vitae elementum magna convallis nec. Nam tempor nibh a purus aliquam et adipiscing elit gravida. Ut vitae nunc a libero volutpat gravida. Nullam egestas mi sit amet dui scelerisque eu laoreet nisi ultrices. Ut vitae nunc a libero volutpat gravida. Nam tempor nibh a purus aliquam.
+                    p(style='text-align:right; margin-right: 16px')
+                        a.button(href='#') More Info
+                        a.button(href='#') Buy Now
+                div
+                    img(src='http://www.bgvakancia.com/common_images/offers/7289/thumb_e4ededa1323c52fd2404c0cd54b5cf66.jpg', alt='')
+                    h2 Mauris elementum
+                    p
+                        | Nulla hendrerit commodo tortor, vitae elementum magna convallis nec. Nam tempor nibh a purus aliquam et adipiscing elit gravida. Ut vitae nunc a libero volutpat gravida. Nullam egestas mi sit amet dui scelerisque eu laoreet nisi ultrices. Ut vitae nunc a libero volutpat gravida. Nam tempor nibh a purus aliquam.
+                    p(style='text-align:right; margin-right: 16px')
+                        a.button(href='#') More Info
+                        a.button(href='#') Buy Now
+                div
+                    img(src='http://www.bgvakancia.com/common_images/offers/812/thumb_6d219cd52d0596c2ab6c443615ba76d3.jpg', alt='')
+                    h2 Nam tempor nibh
+                    p
+                        | Nulla hendrerit commodo tortor, vitae elementum magna convallis nec. Nam tempor nibh a purus aliquam et adipiscing elit gravida. Ut vitae nunc a libero volutpat gravida. Nullam egestas mi sit amet dui scelerisque eu laoreet nisi ultrices. Ut vitae nunc a libero volutpat gravida. Nam tempor nibh a purus aliquam.
+                    p(style='text-align:right; margin-right: 16px')
+                        a.button(href='#') More Info
+                        a.button(href='#') Buy Now
+                div
+                    img(src='http://www.bgvakancia.com/common_images/offers/5921/thumb_4137042717e33812b194250e7affd7aa.jpg', alt='')
+                    h2 Supercar
+                    p
+                        | Nulla hendrerit commodo tortor, vitae elementum magna convallis nec. Nam tempor nibh a purus aliquam et adipiscing elit gravida. Ut vitae nunc a libero volutpat gravida. Nullam egestas mi sit amet dui scelerisque eu laoreet nisi ultrices. Ut vitae nunc a libero volutpat gravida. Nam tempor nibh a purus aliquam.
+                    p(style='text-align:right; margin-right: 16px')
+                        a.button(href='#') More Info
+                        a.button(href='#') Buy Now
+            // END tab panes
+            br(clear='all')
+            // navigator
+            #prod_nav
+                ul
+                    li
+                        a(href='#')
+                            img(src='http://www.bgvakancia.com/common_images/offers/7289/thumb_e4ededa1323c52fd2404c0cd54b5cf66.jpg', width='160', alt='')
+                            strong Class aptent
+                            |  $ 199
+                    li
+                        a(href='#')
+                            img(src='http://www.bgvakancia.com/common_images/offers/5921/thumb_4137042717e33812b194250e7affd7aa.jpg', width='160', alt='')
+                            strong Sed dui risus
+                            |  $ 125
+                    li
+                        a(href='#')
+                            img(src='http://www.bgvakancia.com/common_images/offers/7289/thumb_e4ededa1323c52fd2404c0cd54b5cf66.jpg', width='160', alt='')
+                            strong Pellentesque quis
+                            |  $ 480
+                    li
+                        a(href='#')
+                            img(src='http://www.bgvakancia.com/common_images/offers/812/thumb_6d219cd52d0596c2ab6c443615ba76d3.jpg', width='160', alt='')
+                            strong Mauris elementum
+                            |  $ 1099
+                    li
+                        a(href='#')
+                            img(src='http://www.bgvakancia.com/common_images/offers/5921/thumb_4137042717e33812b194250e7affd7aa.jpg', width='160', alt='')
+                            strong Cras et malesuada
+                            |  $ 99
+            // END navigator
+        // END prod wrapper
+        div(style='clear:both')
+
+block scripts    
+    script(src='http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js')
+    script.
+        $(function () {
+            $("#prod_nav ul").tabs("#panes > div", {
+                effect: 'fade',
+                fadeOutSpeed: 400
+            });
+        });
+    script.
+        $(document).ready(function () {
+            $(".pane-list li").click(function () {
+                window.location = $(this).find("a").attr("href");
+                return false;
+            });
+        });
+
+    
