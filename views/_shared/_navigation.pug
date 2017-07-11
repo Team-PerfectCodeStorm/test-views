@@ -1,4 +1,44 @@
 mixin navigation
     
-    header(class='header')
-        | NAVIGATION
+    nav(class="navbar navbar-inverse")
+        div(class="container-fluid")
+            div(class="navbar-header")
+                button(type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar")
+                    span(class="icon-bar")
+                    span(class="icon-bar")
+                    span(class="icon-bar")
+                a(class="navbar-brand" href="#")
+                    | Име на Проекта
+            div(class="collapse navbar-collapse" id="myNavbar")
+                ul(class="nav navbar-nav")
+                    li
+                        a(href="#")
+                            | Всички
+                    li(class="dropdown")
+                        a(class="dropdown-toggle" data-toggle="dropdown" href="#")
+                            | По Региони
+                            span(class="caret")
+                        ul(class="dropdown-menu")
+                            li
+                                a(href="#")
+                                    | Регион 1
+                            li
+                                a(href="#")
+                                    | Регион 2
+                            li
+                                a(href="#")
+                                    | Регион 3
+                            li
+                                a(href="#")
+                                    | Регион 4
+                            li
+                                a(href="#")
+                                    | Регион 5
+                ul(class="nav navbar-nav navbar-right")
+                    li
+                        a(href="#")
+                            | Влез
+                    li
+                        a(href="#") 
+                            | Регистрирай се 
+
