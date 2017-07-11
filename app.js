@@ -11,19 +11,22 @@ app.use(express.static(__dirname + '/public'));
 
 // MAIN PAGE
 app.get('/', function(req, res) {
-    res.render('index');
+    res.render('home/index');
 });
 // LIST ALL PAGE
-app.get('/all', function(req, res) {
-    res.render('all');
+app.get('/hotels', function(req, res) {
+    res.render('hotels/all-hotels');
+});
+app.get('/hotels/:id', function(req, res) {
+    res.render('hotels/hotel-details');
 });
 // LOGIN PAGE
 app.get('/login', function(req, res) {
-    res.render('login');
+    res.render('user/login');
 });
 //REGISTER PAGE
 app.get('/register', function(req, res) {
-    res.render('register');
+    res.render('user/register');
 });
 
 
