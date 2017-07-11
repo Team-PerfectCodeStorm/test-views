@@ -20,6 +20,9 @@ app.get('/hotels', function(req, res) {
 app.get('/hotel-details', function(req, res) {
     res.render('hotels/hotel-details');
 });
+app.get('/hotel-gallery', function(req, res) {
+    res.render('hotels/hotel-gallery');
+});
 // LOGIN PAGE
 app.get('/login', function(req, res) {
     res.render('user/login');
@@ -33,4 +36,3 @@ app.get('/register', function(req, res) {
 app.listen(port, () => {
     console.log(`App started on localhost:${port}`);
 });
-
